@@ -6,7 +6,13 @@ error_reporting(E_ALL);
 require "config.php";
 //is er een formulier verstuurd?
 // -> check of de knop is verstuurd:
-if (isset($_POST['verzend'])) {
+if (isset($_POST['verzend']) &&
+    empty($_POST['onderwerpVeld']) &&
+    empty($_POST['inhoudVeld']) &&
+    empty($_POST['begindatumVeld']) &&
+    empty($_POST['einddatumVeld']) &&
+    isset($_POST['prioritreitVeld']) &&
+    isset($_POST['statusVeld'])) {
     //lees de waarde uit en stop de waarden in variabelen
     $ond = $_POST['onderwerpVeld'];
     $inh = $_POST['inhoudVeld'];

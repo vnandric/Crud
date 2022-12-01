@@ -12,15 +12,15 @@ $prior = $_POST['prioritreitVeld'];
 $stat = $_POST['statusVeld'];
 
 $datumb = strtotime($begin);
-$gdatumb = date('d-m-Y', $datumb);
+$gdatumb = date('Y-m-d', $datumb);
 
 $datume = strtotime($eind);
-$gdatume = date('d-m-Y', $datume);
+$gdatume = date('Y-m-d', $datume);
 
 require "config.php";
-//is er een formulier verstuurd?
+// is er een formulier verstuurd?
 // -> check of de knop is verstuurd:
-//if (isset($_SERVER["HTTP_REFERER"]) && $_SERVER["HTTP_REFERER"] == "https://87788.stu.sd-lab.nl/crud/toevoegForm.html") {
+if (isset($_SERVER["HTTP_REFERER"]) && $_SERVER["HTTP_REFERER"] == "https://87788.stu.sd-lab.nl/crud/toevoegForm.html") {
     
     if (isset($_POST['verzend']) &&
     !empty($_POST['onderwerpVeld']) &&
@@ -31,7 +31,7 @@ require "config.php";
     isset($_POST['statusVeld'])) {
     
         if (is_numeric($prior) && $prior > 1 && $prior <= 5) {
-            if ($begin == $gdatumb) {
+            if ($begin == $gdatumb && $eind == $gdatume) {
                 //maak een toevoeg-query
                 $query = "INSERT INTO crud_agenda";
                 $query .= " (Onderwerp, Inhoud, Begindatum, Einddatum, Prioriteit, Status)";
@@ -59,7 +59,7 @@ require "config.php";
         echo "Het formulier is niet (goed) verstuurd3<br/>";
         echo "<a href='toevoegForm.html'>Terug</a>";
     }
-//} else {
-    //echo "Het formulier is niet (goed) verstuurd<br/>";
-    //echo "<a href='toevoegForm.html'>Terug</a>";
-//}
+} else {
+    echo "Het formulier is niet (goed) verstuurd<br/>";
+    echo "<a href='toevoegForm.html'>Terug</a>";
+}

@@ -3,6 +3,8 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
+require "config.php";
+
 //lees de waarde uit en stop de waarden in variabelen
 $ond = strip_tags($_POST['onderwerpVeld']);
 $inh = strip_tags($_POST['inhoudVeld']);
@@ -17,7 +19,6 @@ $gdatumb = date('Y-m-d', $datumb);
 $datume = strtotime($eind);
 $gdatume = date('Y-m-d', $datume);
 
-require "config.php";
 // is er een formulier verstuurd?
 // -> check of de knop is verstuurd:
 if (isset($_SERVER["HTTP_REFERER"]) && $_SERVER["HTTP_REFERER"] == "https://87788.stu.sd-lab.nl/crud/toevoegForm.html") {

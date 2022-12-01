@@ -1,3 +1,10 @@
+<?php
+
+session_start();
+$token = bin2hex(openssl_random_pseudo_bytes(32));
+$_SESSION['token'] = $token
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,6 +17,7 @@
 
     <form name="agendaFormulier" method="post" action="toevoegVerwerk.php">
         <table>
+            <input type="hidden" name="csrf_token" value="<?php echo $token; ?>">
             <tr>
                 <td>Onderwerp:</td>
                 <td><input type="text" name="onderwerpVeld"></td>

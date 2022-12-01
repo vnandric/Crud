@@ -35,4 +35,4 @@ if (mysqli_num_rows($result) > 0) {
     echo "<p>Geen items gevonden!</p>";
 }
 
-echo "<a href='toevoegForm.html'>Toevoegen</a>";
+echo "<a href='toevoegForm.php'>Toevoegen</a>";

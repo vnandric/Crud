@@ -55,25 +55,25 @@ if (isset($_SESSION["token"]) && $_SESSION["token"] == $_POST["csrf_token"]) {
                         echo "<a href='toonagenda.php'>OVERZICHT</a>";
                     } else {
                         echo "Het formulier is niet (goed) verstuurd<br/>";
-                        echo "<a href='toevoegForm.html'>Terug</a>";
+                        echo "<a href='toevoegForm.php'>Terug</a>";
                     }
                 } else {
                     echo "Het formulier is niet (goed) verstuurd<br/>";
-                    echo "<a href='toevoegForm.html'>Terug</a>";
+                    echo "<a href='toevoegForm.php'>Terug</a>";
                 }
             } else {
                 echo "Het formulier is niet (goed) verstuurd4<br/>";
-                echo "<a href='toevoegForm.html'>Terug</a>";
+                echo "<a href='toevoegForm.php'>Terug</a>";
             }
         } else {
             echo "Het formulier is niet (goed) verstuurd<br/>";
-            echo "<a href='toevoegForm.html'>Terug</a>";
+            echo "<a href='toevoegForm.php'>Terug</a>";
         }
     } else {
         echo "Het formulier is niet (goed) verstuurd<br/>";
-        echo "<a href='toevoegForm.html'>Terug</a>";
+        echo "<a href='toevoegForm.php'>Terug</a>";
     }
 } else {
     echo "Het formulier is niet (goed) verstuurd<br/>";
-    echo "<a href='toevoegForm.html'>Terug</a>";
+    echo "<a href='toevoegForm.php'>Terug</a>";
 }

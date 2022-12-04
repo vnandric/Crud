@@ -16,20 +16,22 @@ require 'config.php';
 
 </head>
 <body>
-    <table border="1px">
-        <th>Log in</th>
-        <tr>
-            <td>Gebruiker: </td>
-            <td><input type="text" name="username" id="username" required></td>
-        </tr>
-        <tr>
-            <td>Wachtwoord: </td>
-            <td><input type="password" name="password" id="password" required></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td><input type="submit" value="inloggen" name="submit"></td>
-        </tr>
-    </table>
+    <form name="inlogFrom" method="post" action="inlog_verwerk.php">
+        <table border="1px">
+            <th>Log in</th>
+            <tr>
+                <td>Gebruiker: </td>
+                <td><input type="text" name="username" id="username" required></td>
+            </tr>
+            <tr>
+                <td>Wachtwoord: </td>
+                <td><input type="password" name="password" id="password" required></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="inloggen" name="submit"></td>
+            </tr>
+        </table>
+    </form>
 </body>
 </html>

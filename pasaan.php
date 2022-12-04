@@ -1,3 +1,8 @@
+<?php
+
+require_once 'session.inc.php';
+
+?>
 <html>
     <head>
         <title>Gegevens aanpassen</title>

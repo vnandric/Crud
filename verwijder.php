@@ -1,4 +1,7 @@
 <?php
+
+require_once 'session.inc.php';
+
 //lees het id uit de url
 $id = $_GET['id'];
 $onderwerp = $_GET['onderwerp'];

@@ -1,7 +1,5 @@
 <?php
 
-//lees het sessie-bestand
-require_once 'session.inc.php';
 // voeg database verbinding toe
 require 'config.php';
 
@@ -18,7 +16,8 @@ if (!$result) {
 }
 // als er records zijn
 if (mysqli_num_rows($result) > 0) {
-    echo "U bent ingelogd als " . $_SESSION['username'];
+
+    echo "<a href='inlog.php'>Log in</a> <br>";
 
     echo "<table border='1px'>";
 
@@ -30,9 +29,9 @@ if (mysqli_num_rows($result) > 0) {
             // toon de gegevens van het item
             echo "<td>" . $item['Onderwerp'] . "</td>";
             echo "<td>" . $item['Inhoud'] . "</td>";
-            echo "<td><a href='detail.php?id=" . $item['ID'] . "'>detail</a></td>";
-            echo "<td><a href='verwijder.php?id=" . $item['ID'] . "&onderwerp=" . $item['Onderwerp'] . "&inhoud=" . $item['Inhoud'] ."'>verwijder</a></td>";
-            echo "<td><a href='pasaan.php?id=" . $item['ID'] . "'>Pas aan</a></td>";
+            echo "<td><a href='inlog.php'>detail</a></td>";
+            echo "<td><a href='inlog.php'>verwijder</a></td>";
+            echo "<td><a href='inlog.php'>Pas aan</a></td>";
         echo "</tr>";
     }
     echo "</table>";
@@ -40,5 +39,4 @@ if (mysqli_num_rows($result) > 0) {
     echo "<p>Geen items gevonden!</p>";
 }
 
-echo "<a href='toevoegForm.php'>Toevoegen</a> <br>";
-echo "<a href='loguit.php'>log uit</a>";
+echo "<a href='inlog.php'>Toevoegen</a> <br>";

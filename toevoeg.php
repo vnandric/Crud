@@ -1,4 +1,7 @@
 <?php
+
+require_once 'session.inc.php';
+
 require "config.php";
 
 $query = "INSERT INTO crud_agenda (Onderwerp, Inhoud, Begindatum, Einddatum, Prioriteit, Status)

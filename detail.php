@@ -1,4 +1,7 @@
 <?php
+
+require_once 'session.inc.php';
+
 //Voeg de dtabase-verbinding toe
 require 'config.php';
 

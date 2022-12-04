@@ -1,5 +1,7 @@
 <?php
 
+require_once 'session.inc.php';
+
 require 'config.php';
 
 //is er een formulier verstuurd?

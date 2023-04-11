@@ -5,8 +5,8 @@ error_reporting(E_ALL);
 
 // database logingegevens
 $db_hostname = '127.0.0.1';
-$db_username = 'db87788';
-$db_password = 'Srecko1509';
+$db_username = '';
+$db_password = '';
 $db_database = '87788_database';
 
 // maak de database verbinding
